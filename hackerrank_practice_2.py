@@ -42,7 +42,9 @@ def jumpingOnClouds(c):
                         temp=temp+1
                         j=j+1
                         print(f"3 {i} {j}")    
-                    
+                else: 
+                    j= j+1
+                    break   
                          
     
         
