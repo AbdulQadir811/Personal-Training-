@@ -15,20 +15,38 @@ import sys
 
 def jumpingOnClouds(c):
     # Write your code here
-    j  = 0
+    temp = 0
     i  = 0
-    for i,x in enumerate(c):
-        
-        if i+2 < len(c):
-            if c[i+2] == 1:
+    j = 0
+    for x in c:
+        #if i +1 == len(c):
+        #    break
+        if i+1 < len(c):
+            if c[i+1] == 1:
+                i= i+2
                 j=j+1
-                i=i+1
-            elif c[i] == 0:
-                i=i+2
-                j=j+1    
+                print(f"1 {i} {j}")    
+                      
+                temp = 0
+            else:
+                if i+2 < len(c):
+                    if c[i+2] == 1:
+                        
+                        i=i+1
+                        j=j+1
+                        print(f"2 {i} {j}")    
+                      
+                        temp = 0
+                    else:
+                        i=i+2
+                        temp=temp+1
+                        j=j+1
+                        print(f"3 {i} {j}")    
+                    
+                         
+    
         
     result = j
-    
     return result
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
